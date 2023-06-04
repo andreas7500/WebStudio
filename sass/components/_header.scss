@@ -1,0 +1,145 @@
+.header {
+  background-color: var(--secondary-text-color);
+  border-bottom: 1px solid var(--line-color);
+}
+
+.container-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header__contact {
+  @media screen and (min-width: 1199px) {
+    display: flex;
+    margin-left: auto;
+  }
+}
+
+.header__contact {
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-left: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: auto;
+
+    align-items: center;
+    gap: 50px;
+  }
+}
+
+.header__item {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.header__contact .header__item:not(:last-child) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 10px;
+  }
+}
+
+.header__icon {
+  fill: currentColor;
+}
+
+.header__link {
+  @media screen and (min-width: 1200px) {
+  }
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--owner-text-color);
+  transition: color 250ms var(--cubic);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.nav {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-left: 87px;
+}
+
+.nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+  transition: color 250ms var(--cubic);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.nav__link--current {
+  position: relative;
+  color: var(--accent-color);
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    background: #2196f3;
+    border-radius: 2px;
+  }
+}
+
+.header__logo {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+
+.logo {
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+
+  @media screen and (min-width: 1199px) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+
+  transition: color 250ms var(--cubic);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.header__logo--color {
+  color: var(--logo-color-text);
+}
+
+.logo__web {
+  color: var(--accent-color);
+}
